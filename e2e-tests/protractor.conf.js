@@ -11,7 +11,7 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  baseUrl: 'http://localhost:8000/',
+  baseUrl: 'http://112.74.60.193:8000/',
 
   framework: 'jasmine',
 
