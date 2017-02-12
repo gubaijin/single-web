@@ -7,9 +7,4 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version',
   'ncy-angular-breadcrumb',
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+]);
