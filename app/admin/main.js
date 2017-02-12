@@ -12,7 +12,7 @@ angular.module('app')
 
       // config
       $scope.app = {
-        // host:"http://gplucky.com:8082",
+        host:"http://112.74.60.193:8000",
         name: 'Angulr',
         version: '1.3.3',
         // for chart colors
@@ -65,6 +65,13 @@ angular.module('app')
         $translate.use(langKey);
         $scope.lang.isopen = !$scope.lang.isopen;
       };
+
+      $scope.session_user = $localStorage.user;
+      $scope.logout = function(){
+        $localStorage.auth = null;
+        $http.defaults.headers.common['Authorization'] = "Basic";
+        $state.go("auth.login");
+      }
 
       function isSmartDevice( $window )
       {
